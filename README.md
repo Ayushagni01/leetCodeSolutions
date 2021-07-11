@@ -1,2 +1,3 @@
 # leetCodeSolutions
-Better Programming better Solution s\
+Better Programming better Solution solutions
+
