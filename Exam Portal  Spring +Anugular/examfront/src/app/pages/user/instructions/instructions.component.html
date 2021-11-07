@@ -1,0 +1,69 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt10">
+                        <mat-card-header>
+                            <mat-card-title>Read the Instruction Carefully</mat-card-title>
+                        </mat-card-header>
+                           
+                        <mat-card-content class="ml20">
+                            <h3>{{quiz.title}}</h3>
+                            <p>{{quiz.description}}</p>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <h1>Important Instruction</h1>
+            
+                            <ol>
+                                
+                                <li>You have to submit Quiz within <b>{{quiz.numberOfQuestions*1}} minutes</b></li>
+                                <li> You can attemp the quiz any number of time</li>
+                                <li>There are <b>{{quiz.numberOfQuestions}} questions</b> in this Quiz</li>
+                                <li>Each Question carries<b> {{quiz.numberOfQuestions/quiz.maxMarks}} marks</b></li>
+                                <li>No <b>Negative Marking </b> for wrong questions.</li>
+                                <li>All Question is of MCQ types</li>
+                            </ol>
+                            <mat-divider></mat-divider>
+                            <br>
+                            <h1>Attempting Quiz</h1>
+                            <ol>
+                                <li>The exam will start at 10:00 Am sharp and will conclude at 11:30 Am sharp. You can go through the instructions. You will be permitted to login between 9:50 am to 10:00 am. The login screen will be appearing after the instructions screen</li>
+                                <li>The clock has been set at server and count down timer at the top right corner of the screen will display left out time to closure from where you can monitor time you have to complete the exam</li>
+                                <li>There will be four buttons on each screen, the use of buttons is given below </li>
+                                <ul>
+                                    <li><b>RESET</b> : Can be used to deselect a selected answer </li>
+                                    <li><b>SAVE & NEXT </b>: Save the selected answer and proceed to next question
+                                    </li>
+                                    <li><b>SKIP</b> : Skip to the next question without answering current question. This will not save your answer
+                                    </li>
+                                    <li><b>MARK FOR REVIEW </b>: Answer the question and mark it for review at later stage
+                                    </li>
+                                </ul>
+                                <li>Click one of the answer option buttons to select your answer
+                                </li>
+                                <li>To change an answer, simply click the desired option button
+                                </li>
+                                <li>To deselect a chosen answer, click the RESET button
+                                </li>
+                                <li>To save the answer before moving to the next question, click on SAVE & NEXT. The next question will automatically be displayed
+                                </li>
+                                <li>Click on SKIP to move to the next question without saving the current question.
+                                </li>
+
+                            </ol>
+
+                            </mat-card-content>
+                       
+                                    <mat-card-actions class="text-center" >
+                                        <button mat-raised-button color="warn" (click)="startQuiz()">Start</button>
+                                     </mat-card-actions>
+                </mat-card>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+<!-- [routerLink]="'/start/'+qid" -->

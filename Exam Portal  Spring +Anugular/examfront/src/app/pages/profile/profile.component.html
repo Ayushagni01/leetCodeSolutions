@@ -1,0 +1,82 @@
+<mat-card *ngIf="user">
+<h2>Your Profile Details</h2>
+<mat-card-content>
+
+    <div class="bootstrap-wrapper">
+
+        <div class="container">
+
+            <div class="container text-center">
+<!--   border:2px solid black; border-radius:50% -->
+                <img src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" class="profile-image">
+            
+            <h1>{{user.firstName}} {{user.lastName}}</h1>
+            
+            </div>
+
+
+
+<div class="row">
+
+    <div class="col-md-10 offset-md-1">
+
+        <table class="table text-center">
+            <tr>
+                <td>Username</td>
+                <td>{{user.username}}</td>
+            </tr>
+            <tr>
+                <td>User id</td>
+                <td>{{user.id}}</td>
+            </tr>
+            <tr>
+                <td>Phone No</td>
+                <td>{{user.phone}}</td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td>{{user.authorities[0].authority}}</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+            </tr>
+
+            <tr>
+                <td>email</td>
+                <td>{{user.email}}</td>
+            </tr>
+
+            
+
+            <tr>
+                <td>Account Expired </td>
+                <td>{{user.accountNonExpired?"NO":"YES"}}</td>
+            </tr>
+            <tr>
+                <td>Account Locked </td>
+                <td>{{user.accountNonLocked?"NO":"YES"}}</td>
+            </tr>
+            
+
+        </table>
+
+    </div>
+
+</div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+   
+</mat-card-content>
+<mat-card-actions class="text-center">
+    <button mat-raised-button color="primary">update</button>
+    <button mat-raised-button color="accent" >SHARE</button>
+  </mat-card-actions>
+</mat-card>
